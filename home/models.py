@@ -12,4 +12,3 @@ class Post(models.Model):
         return f'{self.user} : {self.slug}  ({self.updated})'
 
 
-#test Command
