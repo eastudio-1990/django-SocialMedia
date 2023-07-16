@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.urls import reverse
 
 
 class Post(models.Model):
@@ -14,3 +14,5 @@ class Post(models.Model):
         return f'{self.user} : {self.slug}  ({self.updated})'
 
 
+    def get_absolute_url(self):
+        return reverse('home:post_detail', args=(self.id, self.slug))
