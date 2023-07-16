@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 class Post(models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE)
     body = models.TextField(max_length=300)
-
     slug = models.SlugField(max_length=100)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
