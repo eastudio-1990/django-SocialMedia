@@ -2,6 +2,10 @@
 
 
 {%block content%}
-    <p>{{post.user.username}} {{post.updated|date:"Y-M-D-H"}}</p>
+
+{% if request.user.id == post.user.id %}
+    <a href="{% url 'home:post_delete' post.id %}" class="btn btn-danger">Delete</a>
+{% endif %}
+    <p><a href="{% url 'account:user_profile' post.user.id %}">{{post.user.username}}<a/> {{post.updated|date:"Y-M-D-H"}}</p>
     <p>{{post.body}}</p>
 {%endblock%}
