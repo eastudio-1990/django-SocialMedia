@@ -10,3 +10,6 @@ class Post(models.Model):
 
     def __str__(self):
         return f'{self.user} : {self.slug}  ({self.updated})'
+
+
+#test Command
