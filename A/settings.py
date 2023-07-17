@@ -139,4 +139,4 @@ EMAIL_HOST_USER = 'eastudio1990@gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOST_PASSWORD = 'nlacnmblomwxoiae'
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Esmaeil_Ashrafi'
+DEFAULT_FROM_EMAIL = 'Django Social Media'
