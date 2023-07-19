@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Commment
 
 
 
@@ -12,4 +12,7 @@ class PostAdmin(admin.ModelAdmin):
     raw_id_fields = ('user',)
 
 
-
+@admin.register(Commment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('user', 'post', 'created', 'isreply')
+    raw_id_fields = ('user', 'post', 'reply')
